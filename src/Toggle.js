@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 
 const Toggle = () => {
   const [isToggled, setToggle] = useState(false);
