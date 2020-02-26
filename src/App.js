@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import useTitleInput from './hooks//useTitleInput';
 import Toggle from './Toggle';
-import Counter from './Counter'
+// import Counter from './Counter'
 
 const App = () => {
 
@@ -11,7 +11,6 @@ const App = () => {
   const [dishes, setDishes] = useState([]);
 
   const fetchDishes = async () => {
-    console.log('ran');
     const res = await fetch('https://my-json-server.typicode.com/leveluptuts/fakeapi/dishes');
     const data = await res.json();
 
@@ -20,7 +19,7 @@ const App = () => {
 
   useEffect(() => {
     fetchDishes();
-  }, [name]);
+  }, []);
 
   return (
     <div className="main-wrapper" ref={ref}>
